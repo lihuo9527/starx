@@ -1,0 +1,848 @@
+{
+  "appName": "STARX 中转仓",
+  "button": {
+    "backToHome": "返回首页"
+  },
+  "menu": {
+    "app": "数据大盘",
+    "user": "基本资料",
+    "userAccount": "我的资料",
+    "storeManage": "仓库管理",
+    "storeManageTransfer": "调拨信息",
+    "storeManageWarehouse": "仓库信息",
+    "storeManageShelves": "货架信息",
+    "stockManage": "库存管理",
+    "stockManageStock": "库存信息",
+    "stockManageDefects": "瑕疵仓库",
+    "stockManageIn": "入库明细",
+    "stockManageSell": "出库明细",
+    "stockManageTransfer": "调拨明细",
+    "orderManage": "订单管理",
+    "orderManageList": "订单列表",
+    "orderManageReturn": "退货管理",
+    "orderManageSettles": "对账单",
+    "retailManage": "零售管理",
+    "retailManageSell": "零售出库",
+    "retailManageReturn": "零售退货"
+  },
+  "global": {
+    "message": {
+      "statusCode": "请求状态",
+      "networkError": "网络异常"
+    }
+  },
+  "config": {
+    "orderStatus": {
+      "WAIT_PAY": "待支付",
+      "PAYMENT_SUCCESS": "支付成功",
+      "WAIT_PLATFORM_RECEIPT": "待平台收货",
+      "PLATFORM_RECEIPTED": "平台已收货",
+      "QUALITY_INSPECTION_PASSED": "质检通过",
+      "APPRAISAL_PASSED": "鉴别通过",
+      "WAIT_PLATFORM_DELIVER": "待平台发货",
+      "WAIT_BUYER_RECEIVE": "待买家收货",
+      "TRADE_SUCCESS": "交易成功",
+      "TRADE_FAILED": "交易失败",
+      "TRADE_CLOSE_SUCCESS": "交易关闭成功"
+    },
+    "orderType": {
+      "NORMAL_GOODS": "普通现货",
+      "NORMAL_PRESALE": "普通预售",
+      "IMMEDIATE_REALIZATION": "立即变现",
+      "CROSS_BORDER": "跨境",
+      "FAST_PLUS": "极速Plus",
+      "CONSIGNMENT": "寄售",
+      "WAREHOUSING": "入仓",
+      "FAST_GOODS": "极速现货",
+      "FAST_PRESALE": "极速预售",
+      "BRAND_DIRECT_SUPPLY": "品牌直供现货",
+      "OVERSEAS_GOODS": "海外现货",
+      "LIMITED_TIME_DISCOUNT_ACTIVITY": "限时折扣活动"
+    },
+    "orderCloseType": {
+      "TRADE_CLOSE": "交易关闭",
+      "PAY_TIMEOUT": "超时未支付",
+      "BUYER_CLOSE": "买家关闭", 
+      "DELIVER_TIMEOUT": "超时未发货",
+      "QUALITY_NOT_PASSED": "质检未通过",
+      "PLATFORM_CANCEL": "平台取消", 
+      "SUPPLEMENT_TIMEOUT": "补单超时", 
+      "SUPPLEMENT_DISAGREE": "补单不同意",
+      "RETURN_CLOSE": "退货关闭",
+      "APPLY_REPLACEMENT": "申请换货",
+      "RETURN_SELLER_CLOSE": "退货关闭, 需要退卖家",
+      "BLIND_BOX_RETRIEVED_TIMEOUT": "盲盒超时未取回",
+      "RETURNING": "退货中"
+    }
+  },
+  "pages": {
+    "auth": {
+      "login": {
+        "login": "登录",
+        "welcome": "你好, 欢迎回来",
+        "signIn": "登录到 STARX 中转仓管理系统",
+        "subtitle": "在下方输入详细内容",
+        "loginTips": "首次注册后需联系客服进行开通！",
+        "addService": "点击{{value}}扫码添加",
+        "qrcode": "客服微信"
+      },
+      "register": {
+        "navTitle": "注册",
+        "title": "注册STARX 中转仓",
+        "steps": [
+          "",
+          "注册信息",
+          "个人&企业",
+          "支付"
+        ],
+        "stepsTitle": [
+          "",
+          "注册",
+          "授权",
+          "支付"
+        ],
+        "formTips": "在下方输入详细内容"
+      }
+    },
+    "dashboard": {
+      "app": {
+        "title": {
+          "category": "商品种类",
+          "number": "商品数量",
+          "cost": "库存成本",
+          "brand": "品牌种类",
+          "logs": "日志记录",
+          "market": "市值总价",
+          "profit": "市值利润",
+          "service": "手续费",
+          "sales": "销量排行",
+          "stock": "库存数",
+          "system": "系统操作"
+        },
+        "label": {
+          "aNum": "货号"
+        },
+        "legend": {
+          "IN_STORAGE": "入库",
+          "OUT_STORAGE": "出库",
+          "SALES_VOLUME": "销售额",
+          "PROFIT_MARGIN": "利润额"
+        }
+      },
+      "userAccount": {
+        "tabs": {
+          "general": "基础资料",
+          "changePassword": "修改密码",
+          "billing": "账单信息"
+        }
+      }
+    },
+    "storeManage": {
+      "warehouse": {
+        "label": {
+          "id": "ID",
+          "name": "仓库名称",
+          "address": "仓库地址",
+          "stockCount": "库存总数",
+          "shelfCount": "货架总数",
+          "fee": "手续费",
+          "user": "负责人",
+          "notes": "备注"
+        },
+        "tips": {
+          "addSuccess": "新增成功",
+          "updateSuccess": "修改成功",
+          "delSuccess": "删除成功"
+        }
+      },
+      "shelf": {
+        "label": {
+          "wName": "仓库名称",
+          "area": "区域",
+          "shelves": "货架号",
+          "count": "货物数量",
+          "max": "最大可放置数",
+          "notes": "备注"
+        },
+        "tips": {
+          "addSuccess": "新增成功",
+          "updateSuccess": "修改成功",
+          "delSuccess": "删除成功"
+        }
+      },
+      "transfer": {
+        "button": {
+          "detail": "查看",
+          "audit": "审核",
+          "revert": "反审核"
+        },
+        "label": {
+          "aSNo": "单据编号",
+          "pName": "商品名称",
+          "num": "数量",
+          "price": "金额",
+          "user": "操作员",
+          "status": "状态",
+          "pInfo": "商品信息",
+          "cDate": "单据日期",
+          "cDate_start": "单据开始日期",
+          "cDate_end": "单据结束日期"
+        },
+        "options": {
+          "status": [
+            "未审核",
+            "已完成"
+          ]
+        },
+        "error": {
+          "noSub": "请先选择商品"
+        },
+        "tips": {
+          "addSuccess": "新增成功",
+          "updateSuccess": "修改成功",
+          "success_delete": "删除成功",
+          "success_audit": "审核成功",
+          "success_revert": "反审核成功"
+        }
+      }
+    },
+    "stockManage": {
+      "button": {
+        "detail": "详情",
+        "defectsPic": "瑕疵图",
+        "sell": "出库",
+        "logs": "流水"
+      },
+      "label": {
+        "id": "ID",
+        "relNo": "单据编号",
+        "logo": "商品图片",
+        "title": "商品名称",
+        "aNum": "货号",
+        "num": "库存数量",
+        "zero": "零库存",
+        "size": "尺码",
+        "lockNum": "库存锁定数",
+        "num_1": "入库数量",
+        "num_2": "出库数量",
+        "num_3": "调拨数量",
+        "sTotal": "库存成本",
+        "sPrice": "成本均价",
+        "sPrice_1": "库存成本",
+        "sPrice_2": "出库成本",
+        "sPrice_3": "库存成本",
+        "mTotal": "市值总价",
+        "pTotal": "市值利润",
+        "pRate": "利润率",
+        "gProfit": "毛利润",
+        "notes": "备注",
+        "wName": "所属仓库",
+        "wNameIn": "调入仓库",
+        "wNameOut": "调出仓库",
+        "source_1": "入库渠道",
+        "source_2": "出库渠道",
+        "createDate_1": "入库时间",
+        "createDate_2": "出库时间",
+        "createDate_3": "调拨日期",
+        "date_start": "单据开始时间",
+        "date_end": "单据结束时间"
+      },
+      "options": {
+        "zero": [
+          "隐藏",
+          "显示"
+        ]
+      },
+      "tips": {
+        "sellSuccess": "出库成功"
+      }
+    },
+    "retailManage": {
+      "button": {
+        "detail": "查看",
+        "audit": "审核",
+        "revert": "反审核",
+        "add": "新增零售订单"
+      },
+      "label": {
+        "roNo": "单据编号",
+        "pName": "商品名称",
+        "pInfo": "商品信息",
+        "num": "数量",
+        "tPrice": "金额",
+        "cDate": "单据日期",
+        "cDate_start": "单据开始日期",
+        "cDate_end": "单据结束日期",
+        "user": "操作员",
+        "status": "状态"
+      },
+      "options": {
+        "status": [
+          "未审核",
+          "已完成",
+          "",
+          "已退货"
+        ]
+      },
+      "error": {
+        "noSub": "请先选择商品"
+      },
+      "tips": {
+        "addSuccess": "新增成功",
+        "updateSuccess": "修改成功",
+        "success_delete": "删除成功",
+        "success_audit": "审核成功",
+        "success_revert": "反审核成功"
+      }
+    },
+    "orderManage": {
+      "label": {
+        "logo": "商品图片",
+        "title": "商品名称",
+        "aNum": "货号",
+        "oType": "订单类型",
+        "cType": "关闭类型",
+        "size": "尺码",
+        "num": "数量",
+        "pAmount": "订单金额",
+        "sCharge": "手续费",
+        "sSAmount": "应结算金额",
+        "sAmount": "结算金额",
+        "orderNo": "得物订单号",
+        "inNo": "库存单据号",
+        "pTime": "支付时间",
+        "pTime_start": "交易开始时间",
+        "pTime_end": "交易结束时间",
+        "oCTime": "创建时间",
+        "oStatus": "订单状态",
+        "": "结算状态",
+        "wAddr": "出库仓库/货架位置"
+      },
+      "tips": {
+        "noReturnType": "退回仓库不能为空",
+        "confirmSuccess": "确认成功"
+      }
+    }
+  },
+  "sections": {
+    "auth": {
+      "login": {
+        "label": {
+          "password": "密码",
+          "username": "个人账号",
+          "remember": "记住我"
+        },
+        "button": {
+          "register": "注册账号",
+          "login": "登录"
+        },
+        "required": {
+          "username": "请输入账号",
+          "password": "请输入密码"
+        }
+      },
+      "register": {
+        "label": {
+          "username": "登录用户名",
+          "password": "密码",
+          "phone": "手机号",
+          "code": "验证码",
+          "email": "邮箱地址"
+        },
+        "placeholder": {
+          "username": "请输入用户名"
+        },
+        "verify": {
+          "username": "用户名不能有特殊字符"
+        },
+        "button": {
+          "register": "确认注册",
+          "next": "下一步",
+          "getCode": "获取验证码",
+          "choose": "选择"
+        },
+        "title": {
+          "count": "数量",
+          "total": "合计",
+          "orderDetail": "订单详情",
+          "paymentChoice": "选择支付方式"
+        },
+        "text": {
+          "agreeTips": "登录即同意GO PRO球鞋仓储",
+          "and": "和",
+          "agreeTitle": "用户协议",
+          "privacyTitle": "隐私政策",
+          "hasAccount": "已有账号?",
+          "login": "登录",
+          "typeTips": "用户注册需自身查验属于的类型。注册错误将无法进行更改",
+          "pay": "支付",
+          "payType": {
+            "wechat": "推荐使用微信支付",
+            "alipay": "推荐使用支付宝支付"
+          },
+          "order": "订购",
+          "securePay": "安全支付",
+          "GOPROSecurity": "GO PRO球鞋仓库保障您的支付安全",
+          "serviceTitle": "GO PRO SAAS服务协议",
+          "agreeBeforeOpen": "开通前阅读并同意",
+          "codeCountdown": "{{value}}s后重新获取",
+          "mostPopular": "最受欢迎",
+          "payError": "支付失败,请重新扫码尝试",
+          "paySuccess": "订单支付成功，将在 3 秒后自动登录系统，如果未跳转请点击立即跳转"
+        },
+        "unit": {
+          "¥": "元",
+          "DAYS": "日",
+          "MONTHS": "月"
+        },
+        "userType": {
+          "name": {
+            "PERSONAL": "个人卖家",
+            "ENTERPRISE": "企业卖家",
+            "GENERAL": "普通卖家"
+          },
+          "tips": {
+            "PERSONAL": "得物特权卖家用户",
+            "ENTERPRISE": "得物企业卖家用户",
+            "GENERAL": "非得物商家用户"
+          }
+        },
+        "serviceItems": {
+          "time": "使用天数",
+          "realtime": "实时市值",
+          "scan": "扫码入库",
+          "e&A": "审批系统",
+          "goods": "货架系统",
+          "history": "历史价格",
+          "deposit": "闪电寄存",
+          "refund": "瑕疵退货",
+          "wHouse": "仓库数量",
+          "subAccount": "子账号数量"
+        }
+      }
+    },
+    "dashboard": {
+      "userAccount": {
+        "general": {
+          "allowed": "允许",
+          "maxSizeOf": "不超过",
+          "pmSetting": "权限设置",
+          "label": {
+            "name": "用户名",
+            "email": "邮箱地址",
+            "phone": "手机号",
+            "enterpriseName": "企业名称",
+            "wareHouse": "仓库权限",
+            "customer": "客户权限",
+            "zeroStock": "零库存",
+            "authStatus": "得物授权状态",
+            "whouseCount": "仓库数量",
+            "subCount": "授权子用户数"
+          },
+          "value": {
+            "authStatus": {
+              "NORMAL": "正常",
+              "ABNORMAL": "异常"
+            }
+          },
+          "required": {
+            "enterpriseName": "请填写企业名称"
+          },
+          "tips": {
+            "wareHouse": "如果启用则需要到用户管理进行分配仓库",
+            "customer": "如果启用则需要到用户管理进行分配客户",
+            "zeroStock": "如果启动则能看到零库存数据",
+            "uSuccess": "更新成功"
+          },
+          "button": {
+            "saveChange": "保存修改"
+          }
+        },
+        "cPwd": {
+          "required": {
+            "oPwd": "请输入以前的密码",
+            "nPwd": "请输入新的密码",
+            "nPwdV": "新密码最少6位",
+            "cnPwd": "两次输入密码必须一致"
+          },
+          "placeholder": {
+            "oldPassword": "请输入以前的密码",
+            "password": "请输入新密码",
+            "confirmPassword": "请再次输入新密码"
+          },
+          "tips": {
+            "uSuccess": "更新成功, 请重新登录"
+          },
+          "button": {
+            "saveChange": "保存修改"
+          }
+        },
+        "billing": {
+          "title": {
+            "historyBill": "历史账单",
+            "bill": "账单"
+          },
+          "label": {
+            "packageType": "套餐类型",
+            "paymentMethod": "支付渠道",
+            "price": "套餐售价",
+            "orderTime": "订单时间"
+          },
+          "value": {
+            "paidType": {
+              "WEIXIN": "微信",
+              "ALIPAY": "支付宝"
+            }
+          }
+        }
+      }
+    },
+    "orderManage": {
+      "orderInfo": {
+        "title": "退货详情",
+        "text": {
+          "cancel": "退货原因"
+        },
+        "tips": {
+          "empty": "暂无数据"
+        }
+      },
+      "orderConfirm": {
+        "title": "确认收货",
+        "label": {
+          "wName": "退回仓库"
+        },
+        "options": {
+          "returnStockType": {
+            "STOCK_FLAW": "瑕疵仓库",
+            "STOCK_INFO": "当前仓库"
+          }
+        }
+      }
+    },
+    "storeManage": {
+      "warehouseEdit": {
+        "button": {
+          "add": "确认新增",
+          "edit": "确认编辑"
+        },
+        "title": {
+          "edit": "编辑仓库信息",
+          "add": "新增仓库信息"
+        },
+        "label": {
+          "name": "仓库名称",
+          "address": "仓库地址",
+          "fee": "手续费",
+          "user": "负责人",
+          "notes": "备注"
+        }
+      },
+      "shelvesEdit": {
+        "button": {
+          "add": "确认新增",
+          "edit": "确认编辑"
+        },
+        "title": {
+          "edit": "编辑货架信息",
+          "add": "新增货架信息"
+        },
+        "label": {
+          "wName": "仓库名称",
+          "area": "新建区域",
+          "shelves": "货架号",
+          "max": "最大可放置数",
+          "notes": "备注"
+        }
+      },
+      "transferEdit": {
+        "title": {
+          "edit": "编辑调拨商品",
+          "add": "新增调拨商品"
+        },
+        "label": {
+          "aSNo": "单据编号",
+          "cDate": "单据日期",
+          "wNameOut": "当前仓库",
+          "shelvesOut": "货架",
+          "logo": "商品图片",
+          "barcode": "条形码",
+          "aNum": "货号",
+          "title": "商品名称",
+          "size": "尺码",
+          "adjustIn": "调入仓库&货架",
+          "num": "数量",
+          "price_in": "入库单价",
+          "price_out": "出库单价"
+        },
+        "button": {
+          "choose": "选择商品",
+          "batchAddr": "批量设置仓库"
+        },
+        "error": {
+          "noWarehouse": "仓库和货架不能为空"
+        }
+      },
+      "transferBatchWarehouse": {
+        "title": "批量设置",
+        "label": {
+          "wName": "调入仓库",
+          "shelf": "调入货架"
+        }
+      },
+      "transferChoose": {
+        "title": "请选择商品",
+        "label": {
+          "wName": "所属仓库",
+          "aNum": "货号",
+          "logo": "商品图片",
+          "title": "商品名称",
+          "size": "尺码",
+          "num": "库存数量",
+          "lockNum": "库存锁定数",
+          "sTotal": "库存成本"
+        },
+        "tips": {
+          "same": "*单个调库单只能选择同个仓库的商品"
+        }
+      }
+    },
+    "stockManage": {
+      "stockDetail": {
+        "title": "库存详情",
+        "label": {
+          "id": "ID",
+          "aNum": "货号",
+          "size": "尺码",
+          "num": "库存数量",
+          "lockNum": "库存锁定",
+          "sTotal": "库存成本",
+          "sPrice": "成本均价",
+          "mTotal": "市值总价",
+          "pTotal": "市值利润",
+          "pRate": "利润率",
+          "gProfit": "毛利润",
+          "days": "在仓天数",
+          "shelves": "货架位",
+          "wName": "所属仓库",
+          "cTime": "首次入仓时间"
+        },
+        "text": {
+          "total": "总计"
+        },
+        "button": {
+          "logs": "流水"
+        }
+      },
+      "logs": {
+        "title": "业务流水",
+        "label": {
+          "id": "ID",
+          "relNo": "单据编号",
+          "source": "业务类型",
+          "title": "商品名称",
+          "num": "数量",
+          "shelves": "货架位",
+          "wName": "所属仓库",
+          "createDate": "操作日期"
+        }
+      },
+      "stockCount": {
+        "label": {
+          "num": "库存数量",
+          "sTotal": "库存成本",
+          "pTotal": "市值利润",
+          "gProfit": "毛利润",
+          "pRate": "利润率"
+        }
+      },
+      "defectsInfo": {
+        "title": "退货详情",
+        "text": {
+          "cancel": "退货原因"
+        },
+        "tips": {
+          "empty": "暂无数据"
+        }
+      },
+      "defectsSell": {
+        "title": "瑕疵出库",
+        "subTitle": {
+          "countANum": "商品种类",
+          "countNum": "商品数量",
+          "countPrice": "零售金额"
+        },
+        "label": {
+          "orderNotes": "单据备注",
+          "wName": "当前仓库",
+          "barcode": "条形码",
+          "logo": "商品图片",
+          "aNum": "货号",
+          "title": "商品名称",
+          "size": "尺码",
+          "num": "数量",
+          "price_out": "出库单价",
+          "notes": "备注"
+        },
+        "placeholder": {
+          "notes": "请输入单据备注"
+        }
+      }
+    },
+    "retailManage": {
+      "edit": {
+        "title": {
+          "edit": "编辑零售订单",
+          "add": "新增零售订单",
+          "add_return": "新增退货订单",
+          "edit_return": "编辑退货订单",
+          "countANum": "商品种类",
+          "countNum": "商品数量",
+          "countPrice": "零售金额"
+        },
+        "label": {
+          "aSNo": "单据编号",
+          "cDate": "单据日期",
+          "wName": "当前仓库",
+          "wHName": "仓库名称",
+          "shelves": "货架",
+          "logo": "商品图片",
+          "barcode": "条形码",
+          "aNum": "货号",
+          "title": "商品名称",
+          "size": "尺码",
+          "adjustIn": "调入仓库&货架",
+          "num": "数量",
+          "price_in": "入库单价",
+          "price_out": "出库单价",
+          "notes": "备注",
+          "orderNotes": "单据备注",
+          "order": "关联订单"
+        },
+        "button": {
+          "choose": "快速出库",
+          "batchAddr": "批量设置仓库",
+          "batchPrice": "批量设置数量/价格/备注"
+        },
+        "placeholder": {
+          "notes": "请输入单据备注",
+          "scan": "请扫描或输入商品条码并回车"
+        },
+        "error": {
+          "noWarehouse": "仓库和货架不能为空",
+          "noOrder": "请先关联订单"
+        }
+      },
+      "sellChoose": {
+        "title": "请选择商品",
+        "label": {
+          "wName": "所属仓库",
+          "aNum": "货号",
+          "logo": "商品图片",
+          "title": "商品名称",
+          "size": "尺码",
+          "num": "库存数量",
+          "lockNum": "库存锁定数",
+          "sTotal": "库存成本"
+        }
+      },
+      "sellBatchWarehouse": {
+        "title": "批量设置",
+        "label": {
+          "wName": "当前仓库",
+          "shelf": "货架"
+        }
+      },
+      "sellBatchText": {
+        "title": "批量设置",
+        "label": {
+          "num": "数量",
+          "sPrice": "出库单价",
+          "notes": "备注"
+        }
+      },
+      "returnOrder": {
+        "title": "选择关联订单",
+        "label": {
+          "roNo": "单据编号",
+          "title": "商品名称",
+          "cDate": "单据日期",
+          "user": "操作员",
+          "tPrice": "金额",
+          "status": "状态"
+        },
+        "options": {
+          "status": [
+            "未审核",
+            "已完成"
+          ]
+        }
+      }
+    }
+  },
+  "components": {
+    "upload": {
+      "uploadAvatar": {
+        "uploadPhoto": "点击上传",
+        "updatePhoto": "点击更新"
+      }
+    },
+    "empty": {
+      "noData": "暂时没有数据哦~"
+    },
+    "app": {
+      "search": {
+        "button": {
+          "reset": "重置",
+          "search": "查询"
+        }
+      },
+      "table": {
+        "label": {
+          "_action": "操作"
+        },
+        "button": {
+          "add": "新增",
+          "delete": "删除",
+          "edit": "编辑"
+        }
+      },
+      "dialog": {
+        "button": {
+          "cancel": "取消",
+          "confirm": "确定"
+        }
+      }
+    },
+    "hook-form": {
+      "RHFDateRanger": {
+        "label": {
+          "start": "开始时间",
+          "end": "结束时间"
+        }
+      }
+    }
+  },
+  "layouts": {
+    "dashboard": {
+      "header": {
+        "accountPopover": {
+          "logout": "退出"
+        }
+      },
+      "navbar": {
+        "title": {
+          "authType": "账号类型",
+          "authStatus": "授权状态",
+          "endTime": "到期时间"
+        },
+        "value": {
+          "authStatus": {
+            "NORMAL": "正常",
+            "ABNORMAL": "异常"
+          }
+        }
+      }
+    }
+  }
+}

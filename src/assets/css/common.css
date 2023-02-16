@@ -1,0 +1,14 @@
+input:-webkit-autofill {
+  background: none;
+  -webkit-box-shadow: 0 0 0px 32px #fff inset; /**通过边框阴影遮挡住背景*/
+}
+
+.MuiDialogContent-root::-webkit-scrollbar
+{
+  width:0;
+  height:0;
+  background-color:#ffffff;
+}
+.MuiAlert-icon {
+  color: rgb(245, 181, 55);
+}
